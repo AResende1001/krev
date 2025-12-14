@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
     <meta charset="UTF-8">
-    <title>Krev Dictionary</title> 
+    <title>Krev Dictionary</title>
     <style>
         body { 
-            /* ✅ ADIÇÃO CHAVE: Força a largura do layout a 1200px, exigindo rolagem horizontal em telas menores. */
-            width: 1200px;
-            margin: 0;
-            /* FIM DA ADIÇÃO CHAVE */
+            /* KEY CHANGE: FORCING FIXED WIDTH */
+            width: 1200px; /* Defines desktop layout width */
+            margin: 0;     /* Removes standard side margins */
+            /* END OF KEY CHANGE */
             
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             background-color: #f4f4f9; 
@@ -17,7 +17,6 @@
         }
         .container { max-width: 900px; margin: auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); }
         h1, h2, h3 { color: #5a57a8; border-bottom: 2px solid #e0e0f0; padding-bottom: 5px; margin-top: 25px; }
-        /* Título principal sem menção ao idioma */
         h1 { font-size: 2.2em; text-align: center; }
         h2 { font-size: 1.8em; }
         h3 { font-size: 1.4em; color: #7f7cbb; }
@@ -32,7 +31,7 @@
         .biography { margin-top: 40px; padding: 20px; background-color: #e0f7fa; border-radius: 8px; border: 1px solid #b2ebf2; }
         .biography h2 { color: #00838f; border-bottom: 2px solid #00bcd4; }
         
-        /* Estilo para o botão de idioma */
+        /* Style for the language button */
         .lang-switch { text-align: right; margin-bottom: 20px; }
         .lang-switch a {
             padding: 8px 15px;
@@ -52,7 +51,7 @@
 <div class="container">
     
     <div class="lang-switch">
-        <a href="/krev/pt-br/">Ver dicionário em português</a>
+        <a href="/krev/">Ver dicionário em Português</a>
     </div>
 
     <h1>Complete Krev Dictionary</h1>
@@ -60,25 +59,32 @@
     <h2>1. Fundamental Structure and Grammar</h2>
     
     <div class="rule-box">
-        <h3>1.1. Strict Sentence Order (SVO - Subject-Verb-Object)</h3>
-        <p>The standard order is **Subject (S) + Verb (V) + Object (O)**. Verbs are never conjugated.</p>
-        <p class="example"><span class="krev-word">Mi fren den mets.</span> (I eat the meat.)</p>
+        <h3>1.1. Rigid Sentence Order (SVO - Subject-Verb-Object)</h3>
+        <p>The standard order is **Subject (P) + Verb (V) + Object (N)**. Verbs are never conjugated.</p>
+        <p class="example"><span class="krev-word">Mi fren Den Mets.</span> (I eat the Meat.)</p>
 
         <h3>1.2. Negation</h3>
-        <p>Use the particle <span class="krev-word">Na</span> after the subject and before the verb.</p>
-        <p class="example"><span class="krev-word">Vi na sleep.</span> (You do not sleep.)</p>
+        <p>Use the particle <span class="krev-word">Na</span> after the Subject and before the Verb.</p>
+        <p class="example"><span class="krev-word">Vi Na sleep.</span> (You do Not sleep.)</p>
         
         <h3>1.3. Possession (Genitive)</h3>
-        <p>Use the particle <span class="krev-word">De</span>. The structure is: **[Possessed Item] De [Possessor]**.</p>
-        <p class="example"><span class="krev-word">Den dom de mi.</span> (The house of me / My house.)</p>
+        <p>Use the particle <span class="krev-word">De</span>. The structure is: **[Item Possessed] De [Possessor]**.</p>
+        <p class="example"><span class="krev-word">Den Dom De Mi.</span> (The House Of Me / My House.)</p>
 
         <h3>1.4. Comparative</h3>
-        <p>Use the structure **[Linking Verb] + Ple [Adjective] Den**.</p>
-        <p class="example"><span class="krev-word">Den liv zek ple za den den dom.</span> (The book is more big than the house.)</p>
+        <p>Use the structure **[Linking Verb] + Ple [Adjective] Zan**.</p>
+        <p class="example"><span class="krev-word">Den Liv zek Ple Za Zan Den Dom.</span> (The Book is More Big Than the House.)</p>
 
-        <h3>1.5. Yes/No Question (Q)</h3>
-        <p>Add the particle <span class="krev-word">Q</span> at the beginning of the sentence to form a Yes/No question.</p>
-        <p class="example"><span class="krev-word">Q vi fren den mets?</span> (Do you eat the meat?)</p>
+        <h3>1.5. Question (Q) and Tense/Aspect Particles (Ke, Lo)</h3>
+        <p>Aspect and Question particles come at the beginning of the sentence, in priority order: **[Aspect/Tense] + [Q (if it's a question)]**.</p>
+        <p class="example"><span class="krev-word">Ke Q vi fren Den Mets?</span> (Did you eat the Meat?)</p>
+        <p class="example"><span class="krev-word">Lo mi lo sleep.</span> (I will sleep.)</p>
+
+        <h3>1.6. Absolute Transparency Rule</h3>
+        <p>Krev strictly prohibits the existence of Homonyms, Homographs, Homophones, and Paronyms. Every word must have one unique and unambiguous meaning.</p>
+        
+        <h3>1.7. Capitalization (Orthography)</h3>
+        <p>Nouns (N), Adjectives (ADJ), and Functional Particles (Tense, Question, Possession, Articles, Conjunctions, Numbers) are **always capitalized**. Pronouns (P), Verbs (V), and Adverbs (ADV) are only capitalized if they start the sentence.</p>
     </div>
 
     <h2>2. Verb Tenses (Aspect Particles)</h2>
@@ -96,23 +102,44 @@
             <tr>
                 <td><span class="krev-word">Ke</span></td>
                 <td>Past (Perfective)</td>
-                <td>Placed before the verb.</td>
-                <td><span class="krev-word">Mi ke fren.</span></td>
+                <td>Placed at the beginning of the sentence.</td>
+                <td><span class="krev-word">Ke mi fren.</span></td>
                 <td>I ate.</td>
             </tr>
             <tr>
                 <td><span class="krev-word">Lo</span></td>
                 <td>Future</td>
-                <td>Placed before the verb.</td>
-                <td><span class="krev-word">Le lo sleep.</span></td>
+                <td>Placed at the beginning of the sentence.</td>
+                <td><span class="krev-word">Lo le sleep.</span></td>
                 <td>He will sleep.</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>3. Krev Complete Vocabulary</h2>
+    <h2>3. Complete Krev Vocabulary</h2>
+    
+    <h3>3.1. Numbers (NUM)</h3>
+    <div class="rule-box">
+        <h4>Power Rule and Mathematical Notation</h4>
+        <p>Numbers are agglutinative. Units, Tens, Hundreds (<span class="krev-word">Cen</span>), and Thousands (<span class="krev-word">Thau</span>) are followed by the powers of Million (<span class="krev-word">Mili</span>) onwards.
+        Ex: 137 is <span class="krev-word">CenTriDecSit</span>. 4,000 is <span class="krev-word">ForaThau</span>.</p>
+        <p>Powers: $10^3$ (<span class="krev-word">Thau</span>), $10^6$ (<span class="krev-word">Mili</span>), $10^9$ (<span class="krev-word">Bili</span>), $10^{12}$ (<span class="krev-word">Trili</span>)...</p>
+    </div>
+    <table>
+        <tr><th>Krev</th><th>English</th><th>Krev</th><th>English</th><th>Krev</th><th>English</th></tr>
+        <tr><td><span class="krev-word">Ziro</span></td><td>Zero (0)</td><td><span class="krev-word">Un</span></td><td>One (1)</td><td><span class="krev-word">Duo</span></td><td>Two (2)</td></tr>
+        <tr><td><span class="krev-word">Tri</span></td><td>Three (3)</td><td><span class="krev-word">Fora</span></td><td>Four (4)</td><td><span class="krev-word">Fav</span></td><td>Five (5)</td></tr>
+        <tr><td><span class="krev-word">Ses</span></td><td>Six (6)</td><td><span class="krev-word">Sit</span></td><td>Seven (7)</td><td><span class="krev-word">Et</span></td><td>Eight (8)</td></tr>
+        <tr><td><span class="krev-word">Nob</span></td><td>Nine (9)</td><td><span class="krev-word">Dec</span></td><td>Ten (10)</td><td><span class="krev-word">DecUn</span></td><td>Eleven (11)</td></tr>
+        <tr><td><span class="krev-word">Duodec</span></td><td>Twenty (20)</td><td><span class="krev-word">Cen</span></td><td>Hundred (100)</td><td><span class="krev-word">Thau</span></td><td>Thousand (1,000)</td></tr>
+        <tr><td><span class="krev-word">Mili</span></td><td>Million ($10^6$)</td><td><span class="krev-word">Bili</span></td><td>Billion ($10^9$)</td><td><span class="krev-word">Trili</span></td><td>Trillion ($10^{12}$)</td></tr>
+        <tr><td><span class="krev-word">Forali</span></td><td>Quadrillion</td><td><span class="krev-word">Favli</span></td><td>Quintillion</td><td><span class="krev-word">Sesli</span></td><td>Sextillion</td></tr>
+        <tr><td><span class="krev-word">Sitli</span></td><td>Septillion</td><td><span class="krev-word">Etli</span></td><td>Octillion</td><td><span class="krev-word">Nobli</span></td><td>Nonillion</td></tr>
+        <tr><td><span class="krev-word">Decli</span></td><td>Decillion</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    </table>
 
-    <h3>3.1. Pronouns (P)</h3>
+    <h3>3.2. Pronouns (P)</h3>
+    <p>Pronouns are only capitalized at the beginning of the sentence.</p>
     <table>
         <tr><th>Krev</th><th>English</th><th>Krev</th><th>English</th></tr>
         <tr><td><span class="krev-word">Mi</span></td><td>I</td><td><span class="krev-word">Nos</span></td><td>We</td></tr>
@@ -120,37 +147,42 @@
         <tr><td><span class="krev-word">Le</span></td><td>He / She / It</td><td><span class="krev-word">Les</span></td><td>They</td></tr>
     </table>
 
-    <h3>3.2. Nouns (N) - Over 100 Words</h3>
+    <h3>3.3. Nouns (N)</h3>
     <table>
         <tr><th>Krev</th><th>English</th><th>Krev</th><th>English</th><th>Krev</th><th>English</th></tr>
-        <tr><td><span class="krev-word">Dom</span></td><td>House</td><td><span class="krev-word">Arv</span></td><td>Tree</td><td><span class="krev-word">Wata</span></td><td>Water</td></tr>
+        <tr><td><span class="krev-word">Dom</span></td><td>House</td><td><span class="krev-word">Arvus</span></td><td>Tree</td><td><span class="krev-word">Wata</span></td><td>Water</td></tr>
         <tr><td><span class="krev-word">Liv</span></td><td>Book</td><td><span class="krev-word">Fud</span></td><td>Food</td><td><span class="krev-word">Man</span></td><td>Man / Person</td></tr>
-        <tr><td><span class="krev-word">Fon</span></td><td>Telephone</td><td><span class="krev-word">Kam</span></td><td>Camera</td><td><span class="krev-word">Komp</span></td><td>Computer</td></tr>
-        <tr><td><span class="krev-word">Mot</span></td><td>Motor</td><td><span class="krev-word">Rad</span></td><td>Radio</td><td><span class="krev-word">Elek</span></td><td>Electricity</td></tr>
-        <tr><td><span class="krev-word">Fuel</span></td><td>Fuel</td><td><span class="krev-word">Temp</span></td><td>Temple</td><td><span class="krev-word">Dut</span></td><td>Doubt</td></tr>
+        <tr><td><span class="krev-word">Fon</span></td><td>Phone</td><td><span class="krev-word">Kam</span></td><td>Camera</td><td><span class="krev-word">Komp</span></td><td>Computer</td></tr>
+        <tr><td><span class="krev-word">Mot</span></td><td>Engine</td><td><span class="krev-word">Rad</span></td><td>Radio</td><td><span class="krev-word">Elek</span></td><td>Electricity</td></tr>
+        <tr><td><span class="krev-word">Fuel</span></td><td>Fuel</td><td><span class="krev-word">Temp</span></td><td>Temple</td><td><span class="krev-word">Dutes</span></td><td>Doubt</td></tr>
         <tr><td><span class="krev-word">Ver</span></td><td>Truth</td><td><span class="krev-word">Du</span></td><td>Duty</td><td><span class="krev-word">Kref</span></td><td>Belief</td></tr>
         <tr><td><span class="krev-word">Fal</span></td><td>Lie</td><td><span class="krev-word">Libre</span></td><td>Freedom</td><td><span class="krev-word">Hon</span></td><td>Honor</td></tr>
         <tr><td><span class="krev-word">Jus</span></td><td>Justice</td><td><span class="krev-word">Kon</span></td><td>Knowledge</td><td><span class="krev-word">Somb</span></td><td>Shadow</td></tr>
         <tr><td><span class="krev-word">Gras</span></td><td>Grace / Gift</td><td><span class="krev-word">Dest</span></td><td>Destiny</td><td><span class="krev-word">Alm</span></td><td>Soul</td></tr>
         <tr><td><span class="krev-word">Sien</span></td><td>Science</td><td><span class="krev-word">Fi</span></td><td>Faith</td><td><span class="krev-word">Sil</span></td><td>Silence</td></tr>
-        <tr><td><span class="krev-word">Art</span></td><td>Art</td><td><span class="krev-word">Fors</span></td><td>Force</td><td><span class="krev-word">Esp</span></td><td>Hope</td></tr>
-        <tr><td><span class="krev-word">Bel</span></td><td>Beauty</td><td><span class="krev-word">Kaz</span></td><td>Cause</td><td><span class="krev-word">Pad</span></td><td>Path / Way</td></tr>
-        <tr><td><span class="krev-word">Stori</span></td><td>Story / History</td><td><span class="krev-word">Mem</span></td><td>Memory</td><td><span class="krev-word">Peri</span></td><td>Peril / Danger</td></tr>
-        <tr><td><span class="krev-word">Drim</span></td><td>Dream</td><td><span class="krev-word">Prof</span></td><td>Teacher / Professor</td><td><span class="krev-word">Dok</span></td><td>Doctor</td></tr>
-        <tr><td><span class="krev-word">Stud</span></td><td>Student</td><td><span class="krev-word">Var</span></td><td>Warrior</td><td><span class="krev-word">Artis</span></td><td>Artist</td></tr>
-        <tr><td><span class="krev-word">Hila</span></td><td>Healer</td><td><span class="krev-word">Lid</span></td><td>Leader</td><td><span class="krev-word">Sold</span></td><td>Soldier</td></tr>
-        <tr><td><span class="krev-word">Poet</span></td><td>Poet</td><td><span class="krev-word">Trava</span></td><td>Traveler</td><td><span class="krev-word">Muz</span></td><td>Musician</td></tr>
-        <tr><td><span class="krev-word">Kome</span></td><td>Merchant</td><td><span class="krev-word">Jour</span></td><td>Journalist</td><td><span class="krev-word">Engi</span></td><td>Engineer</td></tr>
-        <tr><td><span class="krev-word">Skriba</span></td><td>Writer</td><td><span class="krev-word">Mag</span></td><td>Mage</td><td><span class="krev-word">Biblio</span></td><td>Librarian</td></tr>
-        <tr><td><span class="krev-word">Kap</span></td><td>Head</td><td><span class="krev-word">Han</span></td><td>Hand</td><td><span class="krev-word">Dent</span></td><td>Tooth</td></tr>
-        <tr><td><span class="krev-word">Har</span></td><td>Hair</td><td><span class="krev-word">Fot</span></td><td>Foot</td><td><span class="krev-word">Nas</span></td><td>Nose</td></tr>
-        <tr><td><span class="krev-word">Okul</span></td><td>Eye</td><td><span class="krev-word">Fin</span></td><td>Finger</td><td><span class="krev-word">Skil</span></td><td>Skin</td></tr>
-        <tr><td><span class="krev-word">Buk</span></td><td>Mouth</td><td><span class="krev-word">Kne</span></td><td>Knee</td><td><span class="krev-word">Blud</span></td><td>Blood</td></tr>
-        <tr><td><span class="krev-word">Ora</span></td><td>Ear</td><td><span class="krev-word">Arm</span></td><td>Arm</td><td><span class="krev-word">Sik</span></td><td>Sickness</td></tr>
+        <tr><td><span class="krev-word">Art</span></td><td>Art</td><td><span class="krev-word">Fors</span></td><td>Force / Strength</td><td><span class="krev-word">Esp</span></td><td>Hope</td></tr>
+        <tr><td><span class="krev-word">Bel</span></td><td>Beauty</td><td><span class="krev-word">Kaz</span></td><td>Cause</td><td><span class="krev-word">Pad</span></td><td>Path / Route</td></tr>
+        <tr><td><span class="krev-word">Stori</span></td><td>Story / Tale</td><td><span class="krev-word">Memori</span></td><td>Memory</td><td><span class="krev-word">Peri</span></td><td>Peril / Danger</td></tr>
+        <tr><td><span class="krev-word">Mama</span></td><td>Mother</td><td><span class="krev-word">Papa</span></td><td>Father</td><td><span class="krev-word">Sisa</span></td><td>Sister</td></tr>
+        <tr><td><span class="krev-word">Bro</span></td><td>Brother</td><td><span class="krev-word">Luv</span></td><td>Love</td><td><span class="krev-word">Ha</span></td><td>Joy / Happiness</td></tr>
+        <tr><td><span class="krev-word">Sud</span></td><td>Sadness</td><td><span class="krev-word">Anga</span></td><td>Anger</td><td><span class="krev-word">Krai</span></td><td>Cry / Shout</td></tr>
+        <tr><td><span class="krev-word">Munt</span></td><td>Mountain</td><td><span class="krev-word">Osen</span></td><td>Ocean</td><td><span class="krev-word">Air</span></td><td>Air</td></tr>
+        <tr><td><span class="krev-word">Skay</span></td><td>Sky</td><td><span class="krev-word">Rok</span></td><td>Rock / Stone</td><td><span class="krev-word">Ples</span></td><td>Place</td></tr>
+        <tr><td><span class="krev-word">Tim</span></td><td>Time (concept)</td><td><span class="krev-word">Min</span></td><td>Mind / Meaning</td><td><span class="krev-word">Pesa</span></td><td>Money</td></tr>
+        <tr><td><span class="krev-word">Vois</span></td><td>Voice</td><td><span class="krev-word">Drim</span></td><td>Dream</td><td><span class="krev-word">Prof</span></td><td>Professor</td></tr>
+        <tr><td><span class="krev-word">Dok</span></td><td>Doctor</td><td><span class="krev-word">Stud</span></td><td>Student</td><td><span class="krev-word">Var</span></td><td>Warrior</td></tr>
+        <tr><td><span class="krev-word">Artis</span></td><td>Artist</td><td><span class="krev-word">Hila</span></td><td>Healer</td><td><span class="krev-word">Lid</span></td><td>Leader</td></tr>
+        <tr><td><span class="krev-word">Sold</span></td><td>Soldier</td><td><span class="krev-word">Poet</span></td><td>Poet</td><td><span class="krev-word">Trava</span></td><td>Traveler</td></tr>
+        <tr><td><span class="krev-word">Muz</span></td><td>Musician</td><td><span class="krev-word">Kome</span></td><td>Merchant</td><td><span class="krev-word">Jour</span></td><td>Journalist</td></tr>
+        <tr><td><span class="krev-word">Engi</span></td><td>Engineer</td><td><span class="krev-word">Skriba</span></td><td>Writer</td><td><span class="krev-word">Mag</span></td><td>Mage</td></tr>
+        <tr><td><span class="krev-word">Biblio</span></td><td>Librarian</td><td><span class="krev-word">Kap</span></td><td>Head</td><td><span class="krev-word">Han</span></td><td>Hand</td></tr>
+        <tr><td><span class="krev-word">Dent</span></td><td>Tooth</td><td><span class="krev-word">Har</span></td><td>Hair</td><td><span class="krev-word">Fot</span></td><td>Foot</td></tr>
+        <tr><td><span class="krev-word">Nas</span></td><td>Nose</td><td><span class="krev-word">Okul</span></td><td>Eye</td><td><span class="krev-word">Fin</span></td><td>Finger</td></tr>
+        <tr><td><span class="krev-word">Skil</span></td><td>Skin</td><td><span class="krev-word">Buk</span></td><td>Mouth</td><td><span class="krev-word">Kne</span></td><td>Knee</td></tr>
+        <tr><td><span class="krev-word">Blud</span></td><td>Blood</td><td><span class="krev-word">Ora</span></td><td>Ear</td><td><span class="krev-word">Arm</span></td><td>Arm</td></tr>
         <tr><td><span class="krev-word">Nek</span></td><td>Neck</td><td><span class="krev-word">Leg</span></td><td>Leg</td><td><span class="krev-word">Pin</span></td><td>Pain</td></tr>
         <tr><td><span class="krev-word">Sto</span></td><td>Stomach</td><td><span class="krev-word">Bak</span></td><td>Back</td><td><span class="krev-word">Toi</span></td><td>Toilet</td></tr>
         <tr><td><span class="krev-word">Hart</span></td><td>Heart</td><td><span class="krev-word">Kis</span></td><td>Kiss</td><td><span class="krev-word">Soap</span></td><td>Soap</td></tr>
-        <tr><td><span class="krev-word">Gula</span></td><td>Throat</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
         <tr><td><span class="krev-word">Mets</span></td><td>Meat</td><td><span class="krev-word">Kup</span></td><td>Cup</td><td><span class="krev-word">Suga</span></td><td>Sugar</td></tr>
         <tr><td><span class="krev-word">Fish</span></td><td>Fish</td><td><span class="krev-word">Plat</span></td><td>Plate</td><td><span class="krev-word">Salt</span></td><td>Salt</td></tr>
         <tr><td><span class="krev-word">Veg</span></td><td>Vegetable</td><td><span class="krev-word">Fork</span></td><td>Fork</td><td><span class="krev-word">Buta</span></td><td>Butter</td></tr>
@@ -159,39 +191,50 @@
         <tr><td><span class="krev-word">Milk</span></td><td>Milk</td><td><span class="krev-word">Knif</span></td><td>Knife</td><td><span class="krev-word">Dina</span></td><td>Dinner</td></tr>
         <tr><td><span class="krev-word">Bre</span></td><td>Bread</td><td><span class="krev-word">Ti</span></td><td>Tea</td><td><span class="krev-word">Lans</span></td><td>Lunch</td></tr>
         <tr><td><span class="krev-word">Alko</span></td><td>Alcohol</td><td><span class="krev-word">Kofe</span></td><td>Coffee</td><td><span class="krev-word">Morlan</span></td><td>Breakfast</td></tr>
-        <tr><td><span class="krev-word">Drink</span></td><td>Drink (Noun)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td><span class="krev-word">Drink</span></td><td>Drink (Noun)</td><td><span class="krev-word">Gula</span></td><td>Throat</td><td><span class="krev-word">Sik</span></td><td>Sickness</td></tr>
+        <tr><td><span class="krev-word">Solar</span></td><td>Sun</td><td><span class="krev-word">Mun</span></td><td>Moon</td><td><span class="krev-word">Star</span></td><td>Star</td></tr>
+        <tr><td><span class="krev-word">Wind</span></td><td>Wind</td><td><span class="krev-word">Rain</span></td><td>Rain</td><td><span class="krev-word">Snou</span></td><td>Snow</td></tr>
+        <tr><td><span class="krev-word">Sto</span></td><td>Storm / Typhoon</td><td><span class="krev-word">Dra</span></td><td>Drought</td><td><span class="krev-word">Graz</span></td><td>Grass (Vegetation)</td></tr>
+        <tr><td><span class="krev-word">Flor</span></td><td>Flower</td><td><span class="krev-word">Riva</span></td><td>River</td><td><span class="krev-word">Wud</span></td><td>Forest / Wood</td></tr>
+        <tr><td><span class="krev-word">Diz</span></td><td>Desert</td><td><span class="krev-word">Ilen</span></td><td>Island</td><td>&nbsp;</td><td>&nbsp;</td></tr>
     </table>
 
-    <h3>3.3. Verbs (V) - Over 50 Words</h3>
+    <h3>3.4. Verbs (V)</h3>
+    <p>Verbs are only capitalized at the beginning of the sentence.</p>
     <table>
         <tr><th>Krev</th><th>English</th><th>Krev</th><th>English</th><th>Krev</th><th>English</th></tr>
-        <tr><td><span class="krev-word">Fren</span></td><td>To Eat</td><td><span class="krev-word">Giv</span></td><td>To Give</td><td><span class="krev-word">Tek</span></td><td>To Take / Get</td></tr>
-        <tr><td><span class="krev-word">Sleep</span></td><td>To Sleep</td><td><span class="krev-word">Lu</span></td><td>To Look / See</td><td><span class="krev-word">Au</span></td><td>To Hear</td></tr>
-        <tr><td><span class="krev-word">Mak</span></td><td>To Make / Create</td><td><span class="krev-word">Go</span></td><td>To Go</td><td><span class="krev-word">Kom</span></td><td>To Come</td></tr>
-        <tr><td><span class="krev-word">Hap</span></td><td>To Happen</td><td><span class="krev-word">Kik</span></td><td>To Kick</td><td><span class="krev-word">Run</span></td><td>To Run</td></tr>
-        <tr><td><span class="krev-word">Arv</span></td><td>To Burn</td><td><span class="krev-word">Hav</span></td><td>To Have</td><td><span class="krev-word">Zek</span></td><td>To Be (Linking Verb)</td></tr>
-        <tr><td><span class="krev-word">Jud</span></td><td>To Judge</td><td><span class="krev-word">Mem</span></td><td>To Remember</td><td><span class="krev-word">Hid</span></td><td>To Hide</td></tr>
-        <tr><td><span class="krev-word">Inv</span></td><td>To Invent</td><td><span class="krev-word">Foket</span></td><td>To Forget</td><td><span class="krev-word">Desi</span></td><td>To Decide</td></tr>
-        <tr><td><span class="krev-word">Dut</span></td><td>To Doubt</td><td><span class="krev-word">Heit</span></td><td>To Hate</td><td><span class="krev-word">Prot</span></td><td>To Protect</td></tr>
-        <tr><td><span class="krev-word">Agri</span></td><td>To Agree</td><td><span class="krev-word">Apru</span></td><td>To Approve</td><td><span class="krev-word">Alou</span></td><td>To Allow</td></tr>
-        <tr><td><span class="krev-word">Ekspla</span></td><td>To Explain</td><td><span class="krev-word">Fok</span></td><td>To Focus</td><td><span class="krev-word">Klem</span></td><td>To Claim / Complain</td></tr>
-        <tr><td><span class="krev-word">Imaj</span></td><td>To Imagine</td><td><span class="krev-word">Fiel</span></td><td>To Feel (emotion)</td><td><span class="krev-word">Shar</span></td><td>To Share</td></tr>
-        <tr><td><span class="krev-word">Pre</td></td><td>To Predict</td><td><span class="krev-word">Hop</span></td><td>To Hope</td><td><span class="krev-word">Disk</span></td><td>To Discover</td></tr>
-        <tr><td><span class="krev-word">Trens</span></td><td>To Change (transitive)</td><td><span class="krev-word">Men</span></td><td>To Mention</td><td><span class="krev-word">Trak</span></td><td>To Track</td></tr>
-        <tr><td><span class="krev-word">Sek</span></td><td>To Follow</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td><span class="krev-word">Wash</span></td><td>To Wash</td><td><span class="krev-word">Klin</span></td><td>To Clean</td><td><span class="krev-word">Snel</span></td><td>To Smell</td></tr>
-        <tr><td><span class="krev-word">Remo</span></td><td>To Remove</td><td><span class="krev-word">Dres</span></td><td>To Dress</td><td><span class="krev-word">Bizi</span></td><td>To Occupy</td></tr>
-        <tr><td><span class="krev-word">Lit</span></td><td>To Light / Turn on</td><td><span class="krev-word">Undres</span></td><td>To Undress</td><td><span class="krev-word">Wai</span></td><td>To Wait</td></tr>
-        <tr><td><span class="krev-word">Deli</span></td><td>To Turn off</td><td><span class="krev-word">Shit</span></td><td>To Defecate</td><td><span class="krev-word">Aks</span></td><td>To Ask</td></tr>
-        <tr><td><span class="krev-word">Start</span></td><td>To Start</td><td><span class="krev-word">Pish</span></td><td>To Urinate</td><td><span class="krev-word">Finis</span></td><td>To Finish</td></tr>
-        <tr><td><span class="krev-word">Kont</span></td><td>To Continue</td><td><span class="krev-word">Shau</span></td><td>To Shower</td><td><span class="krev-word">Aks</span></td><td>To Ask</td></tr>
-        <tr><td><span class="krev-word">Ope</span></td><td>To Open</td><td><span class="krev-word">Shav</span></td><td>To Shave</td><td><span class="krev-word">Warn</span></td><td>To Warn</td></tr>
-        <tr><td><span class="krev-word">Klos</span></td><td>To Close</td><td><span class="krev-word">Dri</span></td><td>To Dry</td><td><span class="krev-word">Shou</span></td><td>To Show</td></tr>
-        <tr><td><span class="krev-word">Pla</td><td>To Place / Put</td><td><span class="krev-word">Tri</span></td><td>To Try</td><td><span class="krev-word">Rub</span></td><td>To Rub</td></tr>
-        <tr><td><span class="krev-word">Kros</span></td><td>To Cross</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td><span class="krev-word">fren</span></td><td>To eat</td><td><span class="krev-word">giv</span></td><td>To give</td><td><span class="krev-word">tek</span></td><td>To take / Get</td></tr>
+        <tr><td><span class="krev-word">sleep</span></td><td>To sleep</td><td><span class="krev-word">lu</span></td><td>To look / See</td><td><span class="krev-word">au</span></td><td>To hear</td></tr>
+        <tr><td><span class="krev-word">mak</span></td><td>To make / Create</td><td><span class="krev-word">go</span></td><td>To go</td><td><span class="krev-word">kom</span></td><td>To come</td></tr>
+        <tr><td><span class="krev-word">hap</span></td><td>To happen</td><td><span class="krev-word">kik</span></td><td>To kick</td><td><span class="krev-word">run</span></td><td>To run</td></tr>
+        <tr><td><span class="krev-word">arv</span></td><td>To burn</td><td><span class="krev-word">hav</span></td><td>To have</td><td><span class="krev-word">zek</span></td><td>To be / Be (Linking Verb)</td></tr>
+        <tr><td><span class="krev-word">jud</span></td><td>To judge</td><td><span class="krev-word">mem</span></td><td>To remember</td><td><span class="krev-word">hid</span></td><td>To hide</td></tr>
+        <tr><td><span class="krev-word">inv</span></td><td>To invent</td><td><span class="krev-word">foket</span></td><td>To forget</td><td><span class="krev-word">desi</span></td><td>To decide</td></tr>
+        <tr><td><span class="krev-word">dut</span></td><td>To doubt</td><td><span class="krev-word">heit</span></td><td>To hate</td><td><span class="krev-word">prot</span></td><td>To protect</td></tr>
+        <tr><td><span class="krev-word">agri</span></td><td>To agree</td><td><span class="krev-word">apru</span></td><td>To approve</td><td><span class="krev-word">alou</span></td><td>To allow</td></tr>
+        <tr><td><span class="krev-word">ekspla</span></td><td>To explain</td><td><span class="krev-word">fok</span></td><td>To focus / Concentrate</td><td><span class="krev-word">klem</span></td><td>To complain</td></tr>
+        <tr><td><span class="krev-word">imaj</span></td><td>To imagine</td><td><span class="krev-word">fiel</span></td><td>To feel (emotion)</td><td><span class="krev-word">shar</span></td><td>To share</td></tr>
+        <tr><td><span class="krev-word">pre</span></td><td>To predict</td><td><span class="krev-word">hop</span></td><td>To hope</td><td><span class="krev-word">disk</span></td><td>To discover</td></tr>
+        <tr><td><span class="krev-word">trens</span></td><td>To change (transitive)</td><td><span class="krev-word">men</span></td><td>To mention</td><td><span class="krev-word">trak</span></td><td>To track</td></tr>
+        <tr><td><span class="krev-word">sek</span></td><td>To follow</td><td><span class="krev-word">wor</span></td><td>To work</td><td><span class="krev-word">nid</span></td><td>To need</td></tr>
+        <tr><td><span class="krev-word">fin</span></td><td>To find</td><td><span class="krev-word">hel</span></td><td>To help</td><td><span class="krev-word">lik</span></td><td>To like</td></tr>
+        <tr><td><span class="krev-word">trus</span></td><td>To trust</td><td><span class="krev-word">hurt</span></td><td>To hurt / Injure</td><td><span class="krev-word">disa</span></td><td>To disappear</td></tr>
+        <tr><td><span class="krev-word">gro</span></td><td>To grow</td><td><span class="krev-word">zev</span></td><td>To save / Keep</td><td><span class="krev-word">bild</span></td><td>To build</td></tr>
+        <tr><td><span class="krev-word">hapn</span></td><td>To happen</td><td><span class="krev-word">unds</span></td><td>To understand</td><td><span class="krev-word">wash</span></td><td>To wash</td></tr>
+        <tr><td><span class="krev-word">klin</span></td><td>To clean</td><td><span class="krev-word">snel</span></td><td>To smell</td><td><span class="krev-word">remo</span></td><td>To remove</td></tr>
+        <tr><td><span class="krev-word">dres</span></td><td>To dress</td><td><span class="krev-word">bizi</span></td><td>To occupy</td><td><span class="krev-word">lumi</span></td><td>To light / Turn on</td></tr>
+        <tr><td><span class="krev-word">undres</span></td><td>To undress</td><td><span class="krev-word">wai</span></td><td>To wait</td><td><span class="krev-word">deli</span></td><td>To turn off</td></tr>
+        <tr><td><span class="krev-word">shit</span></td><td>To defecate</td><td><span class="krev-word">aks</span></td><td>To ask / Request</td><td><span class="krev-word">start</span></td><td>To start</td></tr>
+        <tr><td><span class="krev-word">pish</span></td><td>To urinate</td><td><span class="krev-word">finis</span></td><td>To finish</td><td><span class="krev-word">kont</span></td><td>To continue</td></tr>
+        <tr><td><span class="krev-word">shau</span></td><td>To shower</td><td><span class="krev-word">ope</span></td><td>To open</td><td><span class="krev-word">shav</span></td><td>To shave</td></tr>
+        <tr><td><span class="krev-word">warn</span></td><td>To warn</td><td><span class="krev-word">klos</span></td><td>To close</td><td><span class="krev-word">dri</span></td><td>To dry</td></tr>
+        <tr><td><span class="krev-word">shou</span></td><td>To show</td><td><span class="krev-word">pla</td><td>To place / Put</td><td><span class="krev-word">tri</span></td><td>To try</td></tr>
+        <tr><td><span class="krev-word">rub</span></td><td>To rub</td><td><span class="krev-word">kros</span></td><td>To cross</td><td><span class="krev-word">raino</span></td><td>To rain</td></tr>
+        <tr><td><span class="krev-word">snouo</span></td><td>To snow</td><td><span class="krev-word">flai</span></td><td>To fly</td><td><span class="krev-word">krim</span></td><td>To crawl</td></tr>
+        <tr><td><span class="krev-word">svim</span></td><td>To swim</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
     </table>
 
-    <h3>3.4. Adjectives (ADJ) - Over 40 Words</h3>
+    <h3>3.5. Adjectives (ADJ)</h3>
     <table>
         <tr><th>Krev</th><th>English</th><th>Krev</th><th>English</th><th>Krev</th><th>English</th></tr>
         <tr><td><span class="krev-word">Za</span></td><td>Big / Large</td><td><span class="krev-word">Lit</span></td><td>Small</td><td><span class="krev-word">Nau</span></td><td>New</td></tr>
@@ -202,54 +245,90 @@
         <tr><td><span class="krev-word">Lib</span></td><td>Free</td><td><span class="krev-word">Perf</span></td><td>Perfect</td><td><span class="krev-word">Ansh</span></td><td>Ancient</td></tr>
         <tr><td><span class="krev-word">Slo</span></td><td>Slow</td><td><span class="krev-word">Fast</span></td><td>Fast</td><td><span class="krev-word">Pova</span></td><td>Powerful</td></tr>
         <tr><td><span class="krev-word">Klar</span></td><td>Clear (light/idea)</td><td><span class="krev-word">Dark</span></td><td>Dark</td><td><span class="krev-word">Redi</span></td><td>Ready</td></tr>
-        <tr><td><span class="krev-word">Hie</span></td><td>High / Tall</td><td><span class="krev-word">Lo</span></td><td>Low</td><td><span class="krev-word">Voi</span></td><td>Empty</td></tr>
-        <tr><td><span class="krev-word">Own</span></td><td>Own / Proper</td><td><span class="krev-word">Komu</span></td><td>Common</td><td><span class="krev-word">Stren</span></td><td>Strange</td></tr>
-        <tr><td><span class="krev-word">Lega</span></td><td>Legal / Just</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td><span class="krev-word">Hie</span></td><td>High</td><td><span class="krev-word">Doun</span></td><td>Low</td><td><span class="krev-word">Voi</span></td><td>Empty / Void</td></tr>
+        <tr><td><span class="krev-word">Own</span></td><td>Own / Possession</td><td><span class="krev-word">Komin</span></td><td>Common / Ordinary</td><td><span class="krev-word">Stren</span></td><td>Strange</td></tr>
+        <tr><td><span class="krev-word">Lega</span></td><td>Legal / Fair</td><td><span class="krev-word">Rai</span></td><td>Right / Correct</td><td><span class="krev-word">Wron</span></td><td>Wrong</td></tr>
+        <tr><td><span class="krev-word">Impo</span></td><td>Important</td><td><span class="krev-word">Rea</span></td><td>Real</td><td><span class="krev-word">Oli</span></td><td>Holy / Sacred</td></tr>
         <tr><td><span class="krev-word">Verd</span></td><td>Green</td><td><span class="krev-word">Wit</span></td><td>White</td><td><span class="krev-word">Purp</span></td><td>Purple</td></tr>
-        <tr><td><span class="krev-word">Yel</span></td><td>Yellow</td><td><span class="krev-word">Blak</span></td><td>Black</td><td><span class="krev-word">Gre</span></td><td>Grey</td></tr>
-        <tr><td><span class="krev-word">Oranj</span></td><td>Orange</td><td><span class="krev-word">Braun</span></td><td>Brown</td><td><span class="krev-word">Lait</span></td><td>Light (color)</td></tr>
+        <tr><td><span class="krev-word">Yel</span></td><td>Yellow</td><td><span class="krev-word">Blak</span></td><td>Black</td><td><span class="krev-word">Gre</span></td><td>Gray</td></tr>
+        <tr><td><span class="krev-word">Oranj</span></td><td>Orange</td><td><span class="krev-word">Braun</span></td><td>Brown</td><td><span class="krev-word">Wet</span></td><td>Wet</td></tr>
         <tr><td><span class="krev-word">Pink</span></td><td>Pink</td><td><span class="krev-word">Golde</span></td><td>Golden</td><td><span class="krev-word">Silve</span></td><td>Silver</td></tr>
+        <tr><td><span class="krev-word">Tair</span></td><td>Tired</td><td><span class="krev-word">Motiv</span></td><td>Motivated</td><td><span class="krev-word">Kuri</span></td><td>Curious</td></tr>
+        <tr><td><span class="krev-word">Laut</span></td><td>Loud (volume)</td><td><span class="krev-word">Kviet</span></td><td>Silent / Quiet</td><td><span class="krev-word">Paz</span></td><td>Peaceful</td></tr>
+        <tr><td><span class="krev-word">Hostil</span></td><td>Hostile</td><td><span class="krev-word">Diti</span></td><td>Dirty</td><td><span class="krev-word">Sleek</span></td><td>Clean / Polished</td></tr>
+        <tr><td><span class="krev-word">Kwik</span></td><td>Quick / Immediate</td><td><span class="krev-word">Shy</span></td><td>Shy</td><td><span class="krev-word">Fier</span></td><td>Proud</td></tr>
+        <tr><td><span class="krev-word">Kol</span></td><td>Cold</td><td><span class="krev-word">Hot</span></td><td>Hot</td><td><span class="krev-word">dry</span></td><td>Dry</td></tr>
     </table>
 
-    <h3>3.5. Particles and Adverbials (ADV/P)</h3>
+    <h3>3.6. Particles, Adverbs, and Prepositions (P/ADV)</h3>
+    <p>Particles are always capitalized. Adverbs are only capitalized at the beginning of the sentence.</p>
     <table>
         <tr><th>Krev</th><th>Function / Category</th><th>English</th><th>Krev</th><th>Function / Category</th><th>English</th></tr>
-        <tr><td><span class="krev-word">A</span></td><td>Indefinite Article</td><td>A / An</td><td><span class="krev-word">Den</span></td><td>Definite Article / Comparative</td><td>The / Than (Comparative)</td></tr>
-        <tr><td><span class="krev-word">Na</span></td><td>Negation Particle</td><td>Not</td><td><span class="krev-word">Q</span></td><td>Yes/No Question Particle</td><td>Question marker</td></tr>
+        <tr><td><span class="krev-word">A</span></td><td>Indefinite Article</td><td>A / An</td><td><span class="krev-word">Den</span></td><td>Definite Article</td><td>The</td></tr>
+        <tr><td><span class="krev-word">Na</span></td><td>Negation Particle</td><td>Not</td><td><span class="krev-word">Q</span></td><td>Yes/No Question Particle</td><td>Question Marker</td></tr>
         <tr><td><span class="krev-word">Ke</span></td><td>Past Aspect</td><td>Past (particle)</td><td><span class="krev-word">Lo</span></td><td>Future Aspect</td><td>Future (particle)</td></tr>
-        <tr><td><span class="krev-word">De</span></td><td>Possession (Genitive)</td><td>Of / 's</td><td><span class="krev-word">Ple</span></td><td>Comparative</td><td>More</td></tr>
-        <tr><td><span class="krev-word">Is</span></td><td>Affirmative Response</td><td>Yes</td><td><span class="krev-word">Na</span></td><td>Negative Response</td><td>No</td></tr>
-        <tr><td><span class="krev-word">Ki</span></td><td>Interrogative Pronoun</td><td>What / Which</td><td><span class="krev-word">Ko</span></td><td>Interrogative Pronoun</td><td>Who</td></tr>
+        <tr><td><span class="krev-word">De</span></td><td>Possession (Genitive)</td><td>Of (belonging to)</td><td><span class="krev-word">Ple</span></td><td>Comparative</td><td>More</td></tr>
+        <tr><td><span class="krev-word">Zan</span></td><td>Comparative</td><td>Than</td><td><span class="krev-word">Is</span></td><td>Affirmative Answer</td><td>Yes</td></tr>
+        <tr><td><span class="krev-word">Na</span></td><td>Negative Answer</td><td>No</td><td><span class="krev-word">Ki</span></td><td>Interrogative Pronoun</td><td>What / Which</td></tr>
+        <tr><td><span class="krev-word">Ko</span></td><td>Interrogative Pronoun</td><td>Who</td><td><span class="krev-word">End</span></td><td>Coordinating Conjunction</td><td>And (addition)</td></tr>
+        <tr><td><span class="krev-word">Or</span></td><td>Coordinating Conjunction</td><td>Or (alternative)</td><td><span class="krev-word">Bikoz</span></td><td>Subordinating Conjunction</td><td>Because (cause)</td></tr>
+        <tr><td><span class="krev-word">If</span></td><td>Subordinating Conjunction</td><td>If (condition)</td><td><span class="krev-word">Wen</span></td><td>Subordinating Conjunction</td><td>When (time)</td></tr>
+        <tr><td><span class="krev-word">Dau</span></td><td>Subordinating Conjunction</td><td>Although (concession)</td><td><span class="krev-word">So</span></td><td>Coordinating Conjunction</td><td>So / Therefore</td></tr>
+        <tr><td><span class="krev-word">Dat</span></td><td>Complementizer Particle</td><td>That (I know **that**...)</td><td><span class="krev-word">Nit</span></td><td>Indefinite Pronoun</td><td>Indeterminate Pronoun</td></tr>
         <tr><td><span class="krev-word">Hia</span></td><td>Adverb of Place</td><td>Here</td><td><span class="krev-word">Der</span></td><td>Adverb of Place</td><td>There</td></tr>
-        <tr><td><span class="krev-word">In</span></td><td>Adverb of Place / Prep.</td><td>In / Inside</td><td><span class="krev-word">Out</span></td><td>Adverb of Place / Prep.</td><td>Out / Outside</td></tr>
-        <tr><td><span class="krev-word">Bifor</span></td><td>Adverb of Time / Conjunction</td><td>Before / But</td><td><span class="krev-word">Sun</span></td><td>Advérbio de Tempo</td><td>Soon</td></tr>
-        <tr><td><span class="krev-word">Nir</span></td><td>Adverb of Place</td><td>Near</td><td><span class="krev-word">Far</span></td><td>Adverb of Place</td><td>Far</td></tr>
-        <tr><td><span class="krev-word">Vera</span></td><td>Adverb of Intensity</td><td>Very (intensifier)</td><td><span class="krev-word">Tumu</span></td><td>Adverb of Quantity</td><td>Too much</td></tr>
-        <tr><td><span class="krev-word">Enu</span></td><td>Adverb of Quantity</td><td>Enough</td><td><span class="krev-word">Jus</span></td><td>Adverb of Time</td><td>Just / Already</td></tr>
-        <tr><td><span class="krev-word">Agen</span></td><td>Adverb of Frequency</td><td>Again</td><td><span class="krev-word">Usu</span></td><td>Adverb of Frequency</td><td>Usually</td></tr>
-        <tr><td><span class="krev-word">Suden</td></td><td>Adverb of Manner</td><td>Suddenly</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td><span class="krev-word">In</span></td><td>Preposition</td><td>In / Inside</td><td><span class="krev-word">Out</span></td><td>Preposition</td><td>Out / Outside</td></tr>
+        <tr><td><span class="krev-word">On</span></td><td>Preposition</td><td>On / Upon</td><td><span class="krev-word">Anda</span></td><td>Preposition</td><td>Under / Below</td></tr>
+        <tr><td><span class="krev-word">Neks</span></td><td>Preposition</td><td>Next to</td><td><span class="krev-word">Bihai</span></td><td>Preposition</td><td>Behind</td></tr>
+        <tr><td><span class="krev-word">Fron</span></td><td>Preposition</td><td>In front of</td><td><span class="krev-word">Thu</span></td><td>Preposition</td><td>Through</td></tr>
+        <tr><td><span class="krev-word">Tu</td><td>Preposition</td><td>To (direction)</td><td><span class="krev-word">Wit</span></td><td>Preposition</td><td>With (together with)</td></tr>
+        <tr><td><span class="krev-word">Fro</span></td><td>Preposition</td><td>From (origin)</td><td><span class="krev-word">Fo</span></td><td>Preposition</td><td>For (purpose)</td></tr>
+        <tr><td><span class="krev-word">Bifor</span></td><td>Time Adverb / Prep.</td><td>Before</td><td><span class="krev-word">Bat</span></td><td>Adversative Conjunction</td><td>But</td></tr>
+        <tr><td><span class="krev-word">Sun</span></td><td>Time Adverb</td><td>Soon / Shortly</td><td><span class="krev-word">Nir</span></td><td>Adverb of Place</td><td>Near</td></tr>
+        <tr><td><span class="krev-word">Far</span></td><td>Adverb of Place</td><td>Far</td><td><span class="krev-word">Vera</span></td><td>Intensifier Adverb</td><td>Very (intensifier)</td></tr>
+        <tr><td><span class="krev-word">Tumu</span></td><td>Quantity Adverb</td><td>Too much / In excess</td><td><span class="krev-word">Enu</span></td><td>Quantity Adverb</td><td>Enough</td></tr>
+        <tr><td><span class="krev-word">Jas</span></td><td>Time Adverb</td><td>Just / Already</td><td><span class="krev-word">Agen</span></td><td>Frequency Adverb</td><td>Again</td></tr>
+        <tr><td><span class="krev-word">Usu</span></td><td>Frequency Adverb</td><td>Usually</td><td><span class="krev-word">Suden</span></td><td>Manner Adverb</td><td>Suddenly</td></tr>
+        <tr><td><span class="krev-word">Hau</span></td><td>Interrogative Adverb</td><td>How</td><td><span class="krev-word">Ver</span></td><td>Interrogative Adverb</td><td>Where</td></tr>
+        <tr><td><span class="krev-word">Fiu</span></td><td>Quantifier</td><td>Few</td><td><span class="krev-word">Ol</span></td><td>Quantifier</td><td>All</td></tr>
+        <tr><td><span class="krev-word">Much</span></td><td>Quantifier</td><td>Much (uncountable)</td><td><span class="krev-word">Yeste</span></td><td>Time Adverb</td><td>Yesterday</td></tr>
+        <tr><td><span class="krev-word">Mornu</span></td><td>Time Adverb</td><td>Tomorrow</td><td><span class="krev-word">Tode</span></td><td>Time Adverb</td><td>Today</td></tr>
+        <tr><td><span class="krev-word">Olwe</span></td><td>Frequency Adverb</td><td>Always</td><td><span class="krev-word">Rar</span></td><td>Frequency Adverb</td><td>Rarely</td></tr>
+        <tr><td><span class="krev-word">Oft</span></td><td>Frequency Adverb</td><td>Often</td><td><span class="krev-word">Never</span></td><td>Frequency Adverb</td><td>Never</td></tr>
+        <tr><td><span class="krev-word">Nao</span></td><td>Time Adverb</td><td>Now</td><td><span class="krev-word">Later</span></td><td>Time Adverb</td><td>Later</td></tr>
+        <tr><td><span class="krev-word">Prili</span></td><td>Time Adverb</td><td>Previously / In the past</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    </table>
+
+    <h3>3.7. Greetings and Social Phrases</h3>
+    <table>
+        <tr><th>Krev</th><th>English</th><th>Krev</th><th>English</th></tr>
+        <tr><td><span class="krev-word">Halo</span></td><td>Hello / Hi</td><td><span class="krev-word">Gudde</span></td><td>Good day / Good afternoon</td></tr>
+        <tr><td><span class="krev-word">Gudnig</span></td><td>Good evening / Good night</td><td><span class="krev-word">Bai</span></td><td>Bye</td></tr>
+        <tr><td><span class="krev-word">Sia</span></td><td>See you later</td><td><span class="krev-word">Wel</span></td><td>Well / Fine (response)</td></tr>
     </table>
 
     <div class="biography">
-        <h2>4. Krev Language Philosophy and Biography</h2>
+        <h2>4. Philosophy and Biography of the Krev Language</h2>
         
-        <p>Krev is a **hybrid constructed language (Conlang)** created to facilitate communication. It is **in constant and dynamic development**, aiming to maximize **efficiency** and **clarity** in daily use. Its current structure is a simplified synthesis of global influences, mixing simple grammatical rules with a familiar vocabulary derived from various source languages.</p>
+        <p>Krev is a **Hybrid Constructed Language (Conlang)** created with the goal of facilitating communication. It is in **constant and dynamic development**, aiming to maximize **efficiency** and **clarity** in daily use. Its current structure is a simplified synthesis of global influences, mixing simple grammatical rules with familiar vocabulary derived from various source languages.</p>
 
-        <h3>Core Foundations and Influences</h3>
+        <h3>Core Bases and Influences</h3>
         
         <ul>
             <li>
-                <strong>Indo-European Vocabulary:</strong> The majority of the core and abstract lexicon is derived from **Germanic** (English, German) and **Romance** (Latin, Spanish, Portuguese) roots, making Krev accessible and familiar to speakers of these families.
+                <strong>Absolute Transparency Rule:</strong> Krev's fundamental principle is clarity. The language is built to contain no homonyms, homographs, homophones, or paronyms, ensuring every word has a unique and unambiguous meaning, eliminating reliance on context for comprehension.
             </li>
             <li>
-                <strong>Minimalist Grammar:</strong> The grammatical structure is minimalist, eliminating complex verb conjugation, grammatical gender, and most case inflections. Tenses are marked by simple particles (such as <span class="krev-word">Ke</span> for past and <span class="krev-word">Lo</span> for future), a system simplified similar to the aspect found in some **Slavic** languages.
+                <strong>Indo-European Vocabulary:</strong> Most of the central and abstract lexicon is derived from **Germanic** (English, German) and **Romance** (Latin, Spanish, Portuguese) roots, making Krev accessible and familiar to speakers of these families.
             </li>
             <li>
-                <strong>Strict SVO Syntax:</strong> The rigid **Subject-Verb-Object (SVO)** word order, along with functional particles (like <span class="krev-word">Q</span> for questions), is inspired by the clarity and lack of ambiguity found in many **Creole Languages**.
+                <strong>Minimalist Grammar:</strong> The grammatical structure eliminates verb conjugation, grammatical gender, and most case inflections. Tenses and aspect are marked by particles at the start of the sentence (**Ke, Lo**), maximizing order and transparency.
+            </li>
+            <li>
+                <strong>Rigid SVO Syntax:</strong> The rigid word order of **Subject-Verb-Object (SVO)**, along with functional particles, is inspired by the clarity and lack of ambiguity found in many Creole languages.
             </li>
         </ul>
 
-        <p>Krev was conceived as a practical language, capable of expressing everything from philosophical concepts (<span class="krev-word">Ver</span> - Truth) to everyday needs (<span class="krev-word">Morlan</span> - Breakfast) with a minimum of rules and exceptions, and it continues to evolve based on the needs of its community.</p>
+        <p>Krev was conceived as a practical language, capable of expressing everything from philosophical concepts (<span class="krev-word">Ver</span> - Truth) to daily necessities (<span class="krev-word">Morlan</span> - Breakfast) with the minimum of rules and exceptions.</p>
     </div>
 
 </div>
